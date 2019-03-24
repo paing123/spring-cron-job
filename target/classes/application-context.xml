@@ -23,13 +23,13 @@
         </property>
         <property name="durability" value="true" />
     </bean>
-	<!-- Run the job every first day 12:00 AM of the month -->
+	<!-- Run the job every second -->
 	<bean id="simpleJobTrigger"  class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
 		<property name="jobDetail" ref="simpleJobDetail" />
 		<property name="cronExpression" value="* * * ? * *"/>
 	</bean>
 	
-	<!-- Run the job every 12:00 am every day -->
+	<!-- Run the job every second -->
 	<bean id="complexJobTrigger"  class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
 		<property name="jobDetail" ref="complexJobDetail" />
 		<property name="cronExpression" value="* * * ? * *"/>
